@@ -1,32 +1,16 @@
-@extends('layouts.app')
+@extends('layouts.base.dashboard')
 
-@section('title', 'Dashboard')
+@section('top-content')
+    <div class="col-md-4">Card</div>
+    <div class="col-md-4">Card</div>
+    <div class="col-md-4">Card</div>
+@endsection
 
-@section('content')
+@section('middle-content')
+    <div>Quick Access</div>
+@endsection
 
-<div class="row g-4">
-
-    <div class="col-md-4">
-        <div class="card card-custom p-3 shadow-sm">
-            <h6>Total Balance</h6>
-            <h4>Rp 2.500.000</h4>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="card card-custom p-3 shadow-sm">
-            <h6>Total Income</h6>
-            <h4>Rp 3.000.000</h4>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="card card-custom p-3 shadow-sm">
-            <h6>Total Expense</h6>
-            <h4>Rp 1.000.000</h4>
-        </div>
-    </div>
-
-</div>
-
+@section('bottom-content')
+    <div class="col-md-4">Goals</div>
+    <div class="col-md-8">Table</div>
 @endsection

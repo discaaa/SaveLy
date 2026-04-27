@@ -8,53 +8,57 @@
 
     <style>
         body {
-            background-color: #f5f6fa;
+            background-color: #f4f5fb;
         }
 
-        .sidebar {
-            width: 250px;
-            background: linear-gradient(180deg, #7F5AF0, #6246EA);
+        .main-wrapper {
             min-height: 100vh;
         }
 
-        .sidebar .nav-link {
-            color: #fff;
-            border-radius: 10px;
-            padding: 10px 15px;
+        .content-wrapper {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 28px;
+            margin-top: 20px;
         }
+        .sidebar {
+    width: 250px;
+    background: linear-gradient(180deg, #8B5CF6, #6D28D9);
+    min-height: 100vh;
+}
 
-        .sidebar .nav-link.active {
-            background-color: #ffffff;
-            color: #6246EA;
-            font-weight: 500;
-        }
+/* menu */
+.sidebar .nav-link {
+    color: #fff;
+    border-radius: 12px;
+    padding: 10px 15px;
+    font-weight: 500;
+}
+    /* hover */
+    .sidebar .nav-link:hover {
+        background: rgba(255,255,255,0.15);
+    }
 
-        .navbar-custom {
-            background-color: #fff;
-            border-radius: 12px;
-        }
-
-        .card-custom {
-            border-radius: 16px;
-            border: none;
-        }
+    .sidebar .nav-link.active {
+        background-color: #fff;
+        color: #6D28D9;
+    }
     </style>
 </head>
 <body>
 
 <div class="d-flex">
 
-    {{-- Sidebar --}}
-    @include('layouts.sidebar')
+    <!-- sidebar -->
+    @include('components.sidebar')
 
-    {{-- Main --}}
-    <div class="flex-grow-1 p-3">
+    <div class="flex-grow-1 p-4 main-wrapper">
 
-        {{-- Navbar --}}
-        @include('layouts.navbar')
+        <!-- navbar -->
+        @include('components.navbar')
 
-        {{-- Content --}}
-        <div class="mt-4">
+        <!-- content -->
+        <div class="content-wrapper">
             @yield('content')
         </div>
 
